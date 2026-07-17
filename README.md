@@ -18,7 +18,7 @@ sentinela/
 └── sistema/        aplicação real (backend FastAPI + frontend estático + banco MySQL)
 ```
 
-`landing-page/demo/` é só pra hospedagem pública (portfólio): dados fictícios, login sem autenticação real, tudo reseta ao fechar a aba. O sistema de verdade (`sistema/`) roda só local, com banco MySQL de verdade.
+`landing-page/demo/` é só pra hospedagem pública: dados fictícios, login sem autenticação real, tudo reseta ao fechar a aba. O sistema de verdade (`sistema/`) roda só local, com banco MySQL.
 
 ## Stack
 
@@ -79,7 +79,7 @@ Estática, sem servidor: abra `landing-page/index.html` direto no navegador.
 
 Sentinela é um **projeto acadêmico**, Trabalho Semestral da disciplina de Banco de Dados I do curso de Ciência da Computação - FCT Unesp, Presidente Prudente, 2026.
 
-O objetivo é exclusivamente o estudo da **modelagem e implementação de um Banco de Dados Relacional**; interface e escolhas estéticas são liberdades pessoais dos autores.
+O objetivo é exclusivamente o estudo da **modelagem e implementação de um Banco de Dados Relacional**; interface e escolhas estéticas são liberdades pessoais.
 
 A ideia nasceu como inspiração do **BluePex Cybersecurity Framework Course** - curso em parceria entre a Unesp e a empresa BluePex Cybersecurity que capacitou os alunos a usar o ecossistema de gerenciamento de parques tecnológicos da BluePex.
 
