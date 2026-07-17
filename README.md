@@ -2,7 +2,7 @@
   <img src="landing-page/images/logo_sentinel.png" alt="Sentinela" width="180">
 </p>
 
-<h1 align="center">Sentinela</h1>
+<h1 align="center"><a href="sentinela.junimdev.com.br">Sentinela</a></h1>
 <p align="center"><em>Sistema de Gerenciamento de Parque Tecnológico Empresarial</em></p>
 
 ## Sobre o projeto
