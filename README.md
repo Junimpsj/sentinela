@@ -4,6 +4,7 @@
 
 <h1 align="center"><a href="https://sentinela.junimdev.com.br">Sentinela</a></h1>
 <p align="center"><em>Sistema de Gerenciamento de Parque Tecnológico Empresarial</em></p>
+<p align="center"><em>-> clique no titulo para acessar a DEMO <-</em></p>
 
 ## Sobre o projeto
 
