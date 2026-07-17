@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sentinela - Cadastro de empresa</title>
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="images/favicon.png" sizes="512x512">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="auth-page">
+  <div class="auth-card auth-card--wide">
+    <div class="auth-card__logo">Sentinela<span class="auth-card__logo-dot">.</span></div>
+    <p class="auth-card__subtitle">Cadastro de empresa</p>
+
+    <div id="alertBox" class="alert alert--danger hidden"></div>
+    <div id="successBox" class="alert alert--success hidden"></div>
+
+    <form id="empresaForm">
+      <div class="form-grid">
+        <div class="form-group form-group--full">
+          <label for="razao_social">Razão social</label>
+          <input type="text" id="razao_social" required>
+        </div>
+        <div class="form-group">
+          <label for="cnpj">CNPJ</label>
+          <input type="text" id="cnpj" placeholder="00.000.000/0000-00" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email da empresa</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group form-group--full">
+          <label for="dono_nome">Nome do responsável (dono)</label>
+          <input type="text" id="dono_nome" required>
+        </div>
+        <div class="form-group">
+          <label for="dono_email">Email de login do dono</label>
+          <input type="email" id="dono_email" required>
+        </div>
+        <div class="form-group">
+          <label for="dono_senha">Senha</label>
+          <input type="password" id="dono_senha" minlength="6" required>
+          <p class="form-hint">Mínimo 6 caracteres.</p>
+        </div>
+      </div>
+      <button type="submit" class="btn btn--primary" style="width:100%;margin-top:.5rem;">Criar empresa</button>
+    </form>
+
+    <div class="auth-card__footer">
+      Já tem conta? <a href="index.html">Fazer login</a>
+    </div>
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script>
+  document.getElementById('empresaForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const alertBox = document.getElementById('alertBox');
+    const successBox = document.getElementById('successBox');
+    alertBox.classList.add('hidden');
+    successBox.classList.add('hidden');
+
+    const payload = {
+      razao_social: document.getElementById('razao_social').value.trim(),
+      cnpj: document.getElementById('cnpj').value.trim(),
+      email: document.getElementById('email').value.trim(),
+      dono_nome: document.getElementById('dono_nome').value.trim(),
+      dono_email: document.getElementById('dono_email').value.trim(),
+      dono_senha: document.getElementById('dono_senha').value,
+    };
+
+    try {
+      await apiFetch('/empresas', { method: 'POST', body: payload });
+      successBox.textContent = 'Empresa criada com sucesso. Redirecionando para o login...';
+      successBox.classList.remove('hidden');
+      setTimeout(() => { window.location.href = 'index.html'; }, 1500);
+    } catch (err) {
+      alertBox.textContent = err.message;
+      alertBox.classList.remove('hidden');
+    }
+  });
+</script>
+</body>
+</html>

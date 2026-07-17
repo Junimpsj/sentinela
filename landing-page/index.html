@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; script-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'">
+<title>Sentinela - Controle de Parque Tecnológico</title>
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="images/favicon.png" sizes="512x512">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="#top" class="logo">Sentinela<span class="logo__dot">.</span></a>
+
+    <nav class="nav" id="nav">
+      <ul class="nav__list">
+        <li><a href="#problema" class="nav__link">Problema</a></li>
+        <li><a href="#solucao" class="nav__link">Solução</a></li>
+        <li><a href="#beneficios" class="nav__link">Benefícios</a></li>
+        <li><a href="#funcionamento" class="nav__link">Funcionamento</a></li>
+        <li><a href="#sobre" class="nav__link">Sobre</a></li>
+      </ul>
+      <a href="demo/index.html" class="btn btn--nav">Acesse o Sentinela</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- === Hero === -->
+  <section class="hero">
+    <div class="hero__inner">
+      <picture>
+        <source srcset="images/logo_sentinel.webp" type="image/webp">
+        <img src="images/logo_sentinel.png" alt="Sentinela" class="hero__logo">
+      </picture>
+      <blockquote class="hero__quote">
+        "Nós somos os Sentinelas, nosso destino é monitorar seu Parque Tecnológico. Para o bem da humanidade!"
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- === Problema === -->
+  <section class="problema" id="problema">
+    <picture>
+      <source srcset="images/cabeca_sentinel.webp" type="image/webp">
+      <img loading="lazy" src="images/cabeca_sentinel.png" alt="" class="problema__img" aria-hidden="true">
+    </picture>
+    <div class="problema__inner">
+      <h2 class="section-title reveal">O <em>parque de TI</em> cresce mais rápido do que seu controle sobre ele</h2>
+
+      <div class="cards-grid cards-grid--2x2">
+        <div class="card reveal">
+          <h3 class="card__title">Inventário Disperso em Planilhas</h3>
+          <p class="card__text">Planilhas antigas, uma aba por filial, um jeito diferente de preencher em cada uma. Ninguém sabe, de fato, quantos equipamentos a empresa tem agora.</p>
+        </div>
+        <div class="card reveal">
+          <h3 class="card__title">Licença Vencida, Ninguém Avisou</h3>
+          <p class="card__text">Softwares não licenciados ou já expirados. Você só vê o problema quando tudo parou de funcionar e a conta já ficou muito cara.</p>
+        </div>
+        <div class="card reveal">
+          <h3 class="card__title">Vulnerabilidade pública e exposição invisível</h3>
+          <p class="card__text">Falhas expostas e versões de softwares vulneráveis. Cada máquina é uma porta de entrada para invasores.</p>
+        </div>
+        <div class="card reveal">
+          <h3 class="card__title">Componente trocado e histórico perdido</h3>
+          <p class="card__text">Cada manutenção vira uma lembrança solta. Sem data, sem responsável, sem rastro de qual componente saiu e qual entrou.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === Solução === -->
+  <section class="solucao" id="solucao">
+    <div class="solucao__inner">
+      <picture>
+        <source srcset="images/corpo_2.webp" type="image/webp">
+        <img loading="lazy" src="images/corpo_2.png" alt="Sentinela" class="solucao__img">
+      </picture>
+      <div class="solucao__content">
+        <h2 class="section-title reveal">O que você não vê,<br><em>o Sentinela vigia</em></h2>
+        <p class="solucao__text reveal">O Sentinela <strong class="hl">organiza cada equipamento</strong> por empresa, filial e departamento sem depender de quem lembrou de atualizar a aba certa.</p>
+        <p class="solucao__text reveal">A cada software ou peça registrada, o <strong class="hl">cruzamento com o catálogo de vulnerabilidades</strong> conhecidas acontece na hora, não na próxima auditoria.</p>
+        <p class="solucao__text reveal"><strong class="hl">Manutenção e troca de componente</strong> ficam com data, responsável e o que efetivamente mudou para sempre, não até a planilha sumir.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- === Benefícios === -->
+  <section class="beneficios" id="beneficios">
+    <div class="beneficios__inner">
+      <h2 class="section-title section-title--center reveal">No dia a dia, o que muda?</h2>
+
+      <div class="cards-grid cards-grid--4">
+        <div class="card card--center reveal">
+          <h3 class="card__title">Uma Verdade Só</h3>
+          <p class="card__text">Todas as filiais com um só inventário. Ninguém mais se pergunta "essa planilha é a mais atualizada?"</p>
+        </div>
+        <div class="card card--center reveal">
+          <h3 class="card__title">Alerta Preventivo</h3>
+          <p class="card__text">Vulnerabilidade conhecida vira ocorrência pendente automaticamente. Evitamos a descoberta depois que já foi tarde.</p>
+        </div>
+        <div class="card card--center reveal">
+          <h3 class="card__title">Cada um vê o Seu</h3>
+          <p class="card__text">O dono vê a empresa inteira. Gestor de filial, só a sua. Colaborador, só o próprio departamento. Sem exceção.</p>
+        </div>
+        <div class="card card--center reveal">
+          <h3 class="card__title">Nada se Perde</h3>
+          <p class="card__text">Toda manutenção, toda troca de peça, toda movimentação é registrada, com data e responsável, para sempre.</p>
+        </div>
+      </div>
+
+      <p class="beneficios__tagline reveal">GESTÃO FACILITADA, HISTÓRICO DETALHADO, CONTROLE NA PALMA DA MÃO</p>
+    </div>
+  </section>
+
+  <!-- === Funcionamento === -->
+  <section class="funcionamento" id="funcionamento">
+    <div class="funcionamento__inner">
+      <div class="funcionamento__content">
+        <h2 class="section-title reveal">Como funciona o Sentinela<span class="hl">:</span></h2>
+
+        <ol class="steps">
+          <li class="steps__item reveal">
+            <span class="steps__badge">1</span>
+            <p class="steps__text"><strong>Estruture:</strong> Cadastre a empresa, as filiais e os departamentos. É o esqueleto que faz todo o resto do sistema saber quem vê o quê.</p>
+          </li>
+          <li class="steps__item reveal">
+            <span class="steps__badge">2</span>
+            <p class="steps__text"><strong>Registre:</strong> Equipamentos, componentes e softwares entram no inventário, cada um vinculado ao seu lugar real na empresa.</p>
+          </li>
+          <li class="steps__item reveal">
+            <span class="steps__badge">3</span>
+            <p class="steps__text"><strong>Cruze:</strong> O sistema compara automaticamente o que está instalado com o catálogo de vulnerabilidades conhecidas. Sem clique, sem planilha auxiliar.</p>
+          </li>
+          <li class="steps__item reveal">
+            <span class="steps__badge">4</span>
+            <p class="steps__text"><strong>Acompanhe:</strong> Alertas, manutenções e movimentações aparecem em um painel só, filtrado pelo que cada pessoa tem permissão de ver.</p>
+          </li>
+        </ol>
+      </div>
+      <picture>
+        <source srcset="images/corpo_1.webp" type="image/webp">
+        <img loading="lazy" src="images/corpo_1.png" alt="Sentinela" class="funcionamento__img">
+      </picture>
+    </div>
+  </section>
+
+  <!-- === Manifesto === -->
+  <section class="manifesto">
+    <div class="manifesto__top">
+      <h2 class="section-title section-title--center reveal">Sentinela, o software de controle de parque tecnológico.</h2>
+    </div>
+    <div class="manifesto__bottom">
+      <p class="manifesto__text reveal">Incorporamos em software a essência da vigilância interna, sua empresa finalmente sabe o que possui agora.</p>
+      <a href="demo/index.html" class="btn btn--cta">Acesse o Sentinela</a>
+    </div>
+  </section>
+
+  <!-- === Sobre === -->
+  <section class="sobre" id="sobre">
+    <div class="sobre__inner">
+      <div class="sobre__content">
+        <h2 class="section-title reveal">SOBRE NÓS</h2>
+
+        <p class="sobre__text reveal">Sentinela - Sistema de Gerenciamento de Parque Tecnológico Empresarial é um <strong class="hl">projeto acadêmico</strong> desenvolvido como Trabalho Semestral para a disciplina de Banco de Dados I do curso de Ciência da Computação.</p>
+
+        <p class="sobre__text reveal">O objetivo aqui é única e exclusivamente o <strong class="hl">estudo da modelagem e implementação de um Banco de Dados Relacional</strong> de acordo com o que foi aprendido durante a disciplina. Toda a interface e escolhas estéticas são questões pessoais e que trouxeram leveza no desenvolvimento do trabalho.</p>
+
+        <p class="sobre__text reveal">Deixamos aqui registrado que nosso estudo de um banco de dados que serviria como base de um sistema para suprir esse tipo de necessidade <strong class="hl">surgiu como inspiração</strong> através do conhecimento do BluePex Cybersecurity Framework Course - curso feito em parceria com a Unesp e a empresa BluePex Cybersecurity. Que capacitou nós alunos à utilizar o sistema da BluePex que conta com um ecossistema inteiro de gerenciamento de parques tecnológicos muito bem estruturado.</p>
+
+        <a href="docs/Projeto Semestral - Banco de Dados I - 2026.pdf" target="_blank" rel="noopener noreferrer" class="btn btn--cta reveal">Ver documento do projeto (PDF)</a>
+
+        <div class="autoria">
+          <p class="autoria__label">O projeto é de <strong class="hl">autoria dos alunos</strong>:</p>
+
+          <div class="autoria__aluno">
+            <span class="autoria__nome">Paulo Celso dos Santos Júnior</span>
+            <div class="autoria__icons">
+              <a href="https://www.linkedin.com/in/paulocelsojunior" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="icon-link">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.3-.02-3-1.83-3-1.83 0-2.1 1.43-2.1 2.9V21h-4V9z"/></svg>
+              </a>
+              <a href="https://github.com/Junimpsj" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="icon-link">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5v-1.75c-2.78.62-3.37-1.36-3.37-1.36-.46-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.93.86.09-.66.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.9-1.33 2.74-1.05 2.74-1.05.56 1.4.2 2.45.1 2.71.65.72 1.03 1.63 1.03 2.75 0 3.92-2.34 4.78-4.57 5.04.36.32.68.94.68 1.9v2.82c0 .28.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+              </a>
+              <a href="mailto:p.santos-junior@unesp.br" aria-label="E-mail" class="icon-link">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M2 5h20v14H2V5zm2 2v.01L12 13l8-5.99V7H4zm16 2.24-7.4 5.55a1 1 0 0 1-1.2 0L4 9.24V17h16V9.24z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="autoria__aluno">
+            <span class="autoria__nome">Henrique Finco Fávero</span>
+            <div class="autoria__icons">
+              <a href="https://www.linkedin.com/in/henriquefinco" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="icon-link">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.3-.02-3-1.83-3-1.83 0-2.1 1.43-2.1 2.9V21h-4V9z"/></svg>
+              </a>
+              <a href="mailto:henrique.finco@unesp.br" aria-label="E-mail" class="icon-link">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M2 5h20v14H2V5zm2 2v.01L12 13l8-5.99V7H4zm16 2.24-7.4 5.55a1 1 0 0 1-1.2 0L4 9.24V17h16V9.24z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <p class="autoria__curso">Ciência da Computação - FCT Unesp - Presidente Prudente - 2026</p>
+        </div>
+      </div>
+
+      <div class="sobre__chars">
+        <picture>
+          <source srcset="images/iceman.webp" type="image/webp">
+          <img loading="lazy" src="images/iceman.png" alt="Iceman" class="sobre__char sobre__char--iceman">
+        </picture>
+        <picture>
+          <source srcset="images/beta_ray.webp" type="image/webp">
+          <img loading="lazy" src="images/beta_ray.png" alt="Beta Ray Bill" class="sobre__char sobre__char--cyclops">
+        </picture>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>

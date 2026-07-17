@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sentinela - Login</title>
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="images/favicon.png" sizes="512x512">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="auth-page">
+  <div class="auth-card">
+    <div class="auth-card__logo">Sentinela<span class="auth-card__logo-dot">.</span></div>
+    <p class="auth-card__subtitle">Controle de parque tecnológico</p>
+
+    <div id="alertBox" class="alert alert--danger hidden"></div>
+
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" autocomplete="username">
+      </div>
+      <div class="form-group">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" autocomplete="current-password">
+      </div>
+      <button type="submit" class="btn btn--primary" style="width:100%;margin-top:.5rem;">Entrar</button>
+    </form>
+
+    <div class="auth-card__footer">
+      Não tem uma empresa cadastrada? <a href="cadastro-empresa.html">Cadastre agora</a>
+    </div>
+
+    <p class="demo-note">Ambiente de demonstração: clique em Entrar para explorar com dados fictícios, nenhum dado real é usado ou salvo permanentemente.</p>
+  </div>
+
+  <a href="../index.html" class="auth-page__back">&larr; Voltar para o site</a>
+</div>
+
+<script src="js/api.js"></script>
+<script>
+  document.getElementById('loginForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const alertBox = document.getElementById('alertBox');
+    alertBox.classList.add('hidden');
+
+    const email = document.getElementById('email').value.trim();
+    const senha = document.getElementById('senha').value;
+
+    try {
+      await apiFetch('/auth/login', { method: 'POST', body: { email, senha } });
+      window.location.href = 'dashboard.html';
+    } catch (err) {
+      alertBox.textContent = err.message;
+      alertBox.classList.remove('hidden');
+    }
+  });
+</script>
+</body>
+</html>
